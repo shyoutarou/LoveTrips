@@ -1,4 +1,6 @@
-﻿using MvvmCross.Localization;
+﻿using LoveTrips.Core.Interfaces.Services;
+using MvvmCross.Localization;
+using MvvmCross.Navigation;
 using MvvmCross.Plugin.Messenger;
 using MvvmCross.ViewModels;
 using System;
@@ -9,34 +11,21 @@ namespace LoveTrips.Core.ViewModels
 {
     public class BaseViewModel : MvxViewModel, IDisposable
     {
-        protected IMvxMessenger Messenger;
-        public BaseViewModel(IMvxMessenger messenger)
-        {
-            Messenger = messenger;
-        }
-        public IMvxLanguageBinder TextSource =>
-            new MvxLanguageBinder("", GetType().Name);
+        protected IMvxNavigationService NavigationService;
+        protected IDialogService DialogService;
 
-        protected async Task ReloadDataAsync()
-        {
-            try
-            {
-                await InitializeAsync();
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine(ex.ToString());
-            }
-        }
+         
 
-        protected virtual Task InitializeAsync()
+        public BaseViewModel(IMvxNavigationService navigator,
+                             IDialogService dialog)
         {
-            return Task.FromResult(0);
+            NavigationService = navigator;
+            DialogService = dialog;
         }
 
         public void Dispose()
         {
-            Messenger = null;
+            NavigationService = null;
         }
     }
 }
