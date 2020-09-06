@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Love Trips</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello">Hello World!!</string>
+</resources>
