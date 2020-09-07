@@ -1,14 +1,19 @@
 ﻿using System.Threading.Tasks;
 using MvvmCross.ViewModels;
 using LoveTrips.Core.Services;
+using LoveTrips.Core.Model.App;
+using MvvmCross.Navigation;
+using LoveTrips.Core.Interfaces.Services;
 
 namespace LoveTrips.Core.ViewModels
 {
-    public class TipViewModel : MvxViewModel
+    public class TipViewModel : BaseViewModel
     {
         private readonly ICalculationService _calculationService;
 
-        public TipViewModel(ICalculationService calculationService)
+        public TipViewModel(ICalculationService calculationService,
+            IMvxNavigationService mvxNavigationService)
+            : base(mvxNavigationService)
         {
             _calculationService = calculationService;
         }
@@ -20,6 +25,11 @@ namespace LoveTrips.Core.ViewModels
             SubTotal = 100;
             Generosity = 10;
             Recalcuate();
+        }
+
+
+        public void Init(int parameters)
+        {
         }
 
         private double _subTotal;

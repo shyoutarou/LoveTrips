@@ -14,9 +14,9 @@ namespace LoveTrips.UI.Droid.Views
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.View_Tip);
 
-int count = 0;
-Button button = FindViewById<Button>(Resource.Id.MyButton); 
-button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+            int count = 0;
+            Button button = FindViewById<Button>(Resource.Id.MyButton); 
+            button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
         }
     }
 }

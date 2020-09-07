@@ -1,4 +1,5 @@
-﻿using LoveTrips.Core.Model;
+﻿using LoveTrips.Core.Interfaces.Services;
+using LoveTrips.Core.Model;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;

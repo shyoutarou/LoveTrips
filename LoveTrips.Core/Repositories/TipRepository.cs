@@ -1,4 +1,5 @@
-﻿using LoveTrips.Core.Model;
+﻿using LoveTrips.Core.Interfaces.Repositories;
+using LoveTrips.Core.Model;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

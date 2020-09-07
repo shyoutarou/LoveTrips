@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace LoveTrips.Core.Repositories
+namespace LoveTrips.Core.Interfaces.Repositories
 {
     public interface ITipRepository
     {
