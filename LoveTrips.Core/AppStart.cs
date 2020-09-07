@@ -1,8 +1,10 @@
 ﻿using LoveTrips.Core.Interfaces.Services;
+using LoveTrips.Core.Model.App;
 using LoveTrips.Core.ViewModels;
 using MvvmCross;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+using System;
 using System.Threading.Tasks;
 
 namespace LoveTrips.Core
@@ -19,13 +21,26 @@ namespace LoveTrips.Core
 
         protected override Task NavigateToFirstViewModel(object hint = null)
         {
-            if (_loginService.Login("shyo", "123"))
+            try
             {
-                return NavigationService.Navigate<TipViewModel>();
+                if (_loginService.Login("shyo", "123"))
+                {
+                    var parameter = new DataParameter
+                    {
+                        journeyId = 1,
+                        Name = "Alex"
+                    };
+
+                    return NavigationService.Navigate<TipViewModel>();
+                }
+                else
+                {
+                    return NavigationService.Navigate<LoginViewModel>();
+                }
             }
-            else
+            catch (Exception e)
             {
-                return NavigationService.Navigate<LoginViewModel>();
+                throw new Exception(e.Message);
             }
         }
     }
