@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace LoveTrips.Core.Services
+namespace LoveTrips.Core.Interfaces.Services
 {
     public interface ITipService
     {

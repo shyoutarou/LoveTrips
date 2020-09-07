@@ -1,5 +1,5 @@
-﻿using LoveTrips.Core.Model;
-using LoveTrips.Core.Services;
+﻿using LoveTrips.Core.Interfaces.Services;
+using LoveTrips.Core.Model;
 using MvvmCross.ViewModels;
 using System.Threading.Tasks;
 
