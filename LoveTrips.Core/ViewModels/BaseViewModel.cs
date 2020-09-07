@@ -1,26 +1,24 @@
 ﻿using LoveTrips.Core.Interfaces.Services;
-using MvvmCross.Localization;
+using LoveTrips.Core.Model.App;
 using MvvmCross.Navigation;
-using MvvmCross.Plugin.Messenger;
 using MvvmCross.ViewModels;
 using System;
-using System.Threading.Tasks;
-
 
 namespace LoveTrips.Core.ViewModels
 {
-    public class BaseViewModel : MvxViewModel, IDisposable
+    public class BaseViewModel : MvxViewModel<DataParameter>, IDisposable
     {
         protected IMvxNavigationService NavigationService;
-        protected IDialogService DialogService;
+        protected DataParameter Parameters;
 
-         
-
-        public BaseViewModel(IMvxNavigationService navigator,
-                             IDialogService dialog)
+        public BaseViewModel(IMvxNavigationService navigator)
         {
             NavigationService = navigator;
-            DialogService = dialog;
+        }
+
+        public override void Prepare(DataParameter parameter)
+        {
+            Parameters = parameter;
         }
 
         public void Dispose()
