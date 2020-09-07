@@ -1,9 +1,6 @@
 ﻿using LoveTrips.Core.Interfaces.Repositories;
 using LoveTrips.Core.Interfaces.Services;
 using LoveTrips.Core.Model;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace LoveTrips.Core.Services
