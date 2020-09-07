@@ -1,7 +1,6 @@
 ﻿using LoveTrips.Core.Interfaces.Services;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
-using MvvmCross.Plugin.Messenger;
 
 namespace LoveTrips.Core.ViewModels
 {
@@ -10,8 +9,7 @@ namespace LoveTrips.Core.ViewModels
         private readonly ILoginService _loginService;
 
         public LoginViewModel(ILoginService loginService, 
-                IMvxNavigationService mvxNavigationService, IDialogService dialogService) 
-            : base(mvxNavigationService, dialogService)
+            IMvxNavigationService mvxNavigationService) : base(mvxNavigationService)
         {
             _loginService = loginService;
 
@@ -83,7 +81,7 @@ namespace LoveTrips.Core.ViewModels
             }
             else
             {
-                DialogService.ShowAlertAsync("We were unable to log you in!", "Login Failed", "OK");
+                //DialogService.ShowAlertAsync("We were unable to log you in!", "Login Failed", "OK");
             }
         }
 
