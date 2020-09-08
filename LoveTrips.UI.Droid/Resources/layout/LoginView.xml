@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<StackLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp">
+    android:layout_margin="10dp"
+    android:padding="20dp"
+    android:orientation="vertical">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,10 +22,11 @@
         android:textSize="24dp"
         android:gravity="right"
         local:MvxBind="Text Password" />
-        <Button
+    <Button
         android:id="@+id/btnLogin"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/login"
+        local:MvxBind="Click LogInCommand"
         />
-</StackLayout>
+</LinearLayout>

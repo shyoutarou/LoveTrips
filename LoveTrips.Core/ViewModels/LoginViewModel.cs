@@ -18,6 +18,9 @@ namespace LoveTrips.Core.ViewModels
             IsLoading = false;
         }
 
+        public MvxCommand LogInCommand
+        { get { return new MvxCommand(() => NavigationService.Navigate<TipViewModel>()); } }
+
         private string _username;
         public string Username
         {
