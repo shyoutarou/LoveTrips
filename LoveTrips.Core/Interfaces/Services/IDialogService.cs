@@ -2,8 +2,8 @@
 
 namespace LoveTrips.Core.Interfaces.Services
 {
-    public interface IDialogService
-    {
-        Task ShowAlertAsync(string message, string title, string buttonText);
-    }
+public interface IDialogService
+{
+    Task ShowAlertAsync(string message, string title, string buttonText);
+}
 }
