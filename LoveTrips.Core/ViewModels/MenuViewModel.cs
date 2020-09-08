@@ -7,7 +7,7 @@ using MvvmCross.Navigation;
 using System;
 using System.Collections.ObjectModel;
 
-namespace MyTrains.Core.ViewModel
+namespace LoveTrips.Core.ViewModel
 {
     public class MenuViewModel: BaseViewModel
     {

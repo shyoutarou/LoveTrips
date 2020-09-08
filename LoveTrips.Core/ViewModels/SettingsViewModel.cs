@@ -7,7 +7,7 @@ using MvvmCross.Navigation;
 using MvvmCross.Plugin.Messenger;
 using System.Collections.ObjectModel;
 
-namespace MyTrains.Core.ViewModel
+namespace LoveTrips.Core.ViewModel
 {
     public class SettingsViewModel : BaseViewModel, ISettingsViewModel
     {

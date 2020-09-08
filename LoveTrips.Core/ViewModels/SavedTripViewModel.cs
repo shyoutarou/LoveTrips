@@ -7,7 +7,7 @@ using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using System.Collections.ObjectModel;
 
-namespace MyTrains.Core.ViewModel
+namespace LoveTrips.Core.ViewModel
 {
     public class SavedTripViewModel : BaseViewModel, ISavedTripViewModel
     {

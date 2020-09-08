@@ -9,7 +9,7 @@ using MvvmCross.Navigation;
 using System;
 using System.Collections.ObjectModel;
 
-namespace MyTrains.Core.ViewModel
+namespace LoveTrips.Core.ViewModel
 {
     public class SearchResultViewModel : BaseViewModel, ISearchResultViewModel
     {
@@ -43,7 +43,6 @@ namespace MyTrains.Core.ViewModel
                     };
 
                     NavigationService.Navigate<TripDetailViewModel, DataParameter>(parameter);
-
                 });
             }
         }
@@ -60,7 +59,7 @@ namespace MyTrains.Core.ViewModel
         }
 
 
-        public SearchResultViewModel( ITripDataService tripDataService,
+        public SearchResultViewModel(ITripDataService tripDataService,
             IMvxNavigationService mvxNavigationService) : base(mvxNavigationService)
         {
             _tripDataService = tripDataService;

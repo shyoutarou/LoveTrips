@@ -8,7 +8,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 
-namespace MyTrains.Core.ViewModel
+namespace LoveTrips.Core.ViewModel
 {
     public class SearchTripViewModel : BaseViewModel, ISearchTripViewModel
     {

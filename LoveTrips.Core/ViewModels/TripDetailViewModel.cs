@@ -5,7 +5,7 @@ using LoveTrips.Core.ViewModels;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
 
-namespace MyTrains.Core.ViewModel
+namespace LoveTrips.Core.ViewModel
 {
     public class TripDetailViewModel : BaseViewModel, ITripDetailViewModel
     {

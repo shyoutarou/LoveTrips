@@ -13,9 +13,6 @@ namespace LoveTrips.Core
         {
             try
             {
-                Mvx.IoCProvider.RegisterSingleton<ICalculationService>(new CalculationService());
-                var cityDataService = Mvx.IoCProvider.Resolve<ICalculationService>();
-
                 CreatableTypes().EndingWith("Repository")
                     .AsInterfaces().RegisterAsLazySingleton();
 

@@ -1,7 +1,7 @@
 ﻿using LoveTrips.Core.Interfaces.Services;
 //using Plugin.Connectivity;
 
-namespace MyTrains.Core.Services.General
+namespace LoveTrips.Core.Services.General
 {
     public class ConnectionService : IConnectionService
     {

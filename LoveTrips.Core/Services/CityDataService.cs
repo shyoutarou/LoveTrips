@@ -4,7 +4,7 @@ using LoveTrips.Core.Interfaces.Repository;
 using LoveTrips.Core.Interfaces.Services;
 using LoveTrips.Core.Model;
 
-namespace MyTrains.Core.Services.Data
+namespace LoveTrips.Core.Services.Data
 {
     public class CityDataService: ICityDataService
     {
